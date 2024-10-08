@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "../components/menu/Menu";
 
@@ -124,6 +125,12 @@ export default function Produtos() {
             {burgers.map((burger) => (
                 <div key={burger.id}>
                     <h3>{burger.title}</h3>
+                    <Image
+                        src={burger.image[0]}
+                        alt={burger.description}
+                        width={300}
+                        height={300}
+                    />
                     <p>{burger.values.single}</p>
                     <Link href={`/produtos/${burger.id}`}>Detalhes</Link>
                 </div>
