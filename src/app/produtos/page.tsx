@@ -125,7 +125,7 @@ export default function Produtos() {
                 <div key={burger.id}>
                     <h3>{burger.title}</h3>
                     <p>{burger.values.single}</p>
-                    <Link href={`/produtos/'${burger.id}`}>Detalhes</Link>
+                    <Link href={`/produtos/${burger.id}`}>Detalhes</Link>
                 </div>
             ))}
         </div>
